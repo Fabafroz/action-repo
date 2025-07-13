@@ -1,0 +1,14 @@
+name: Send Webhook to Flask
+
+on:
+  push:
+
+jobs:
+  send-webhook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send POST to Flask
+        run: |
+          curl -X POST https://596a0688bb88.ngrok-free.app/payload \
+          -H "Content-Type: application/json" \
+          -d '{"message": "Hello from GitHub Actions"}'
