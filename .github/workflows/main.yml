@@ -9,6 +9,6 @@ jobs:
     steps:
       - name: Send POST to Flask
         run: |
-          curl -X POST https://596a0688bb88.ngrok-free.app/payload \
+          curl -X POST https://596a0688bb88.ngrok-free.app/webhook \
           -H "Content-Type: application/json" \
           -d '{"message": "Hello from GitHub Actions"}'
